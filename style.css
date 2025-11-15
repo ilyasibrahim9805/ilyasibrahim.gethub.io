@@ -1,0 +1,207 @@
+/* Default Theme (Bright) */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --card-bg: #f4f4f4;
+    --accent: #1e40af;
+}
+
+/* Dark Theme */
+.dark-mode {
+    --bg-color: #121212;
+    --text-color: #ffffff;
+    --card-bg: #1e1e1e;
+    --accent: #fbbf24;
+}
+
+/* Apply theme */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: 0.4s ease-in-out;
+}
+
+/* Theme Toggle Button */
+.theme-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--accent);
+    color: #fff;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.theme-btn:hover {
+    opacity: 0.9;
+}
+
+/* LOGO */
+.craigslist {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+.craigslist img {
+  width: 140px;
+  height: auto;
+}
+
+/* NAVIGATION ICONS */
+.nav-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+  flex-wrap: nowrap;
+  margin-top: 140px;
+  text-align: center;
+}
+
+.nav-item {
+  position: relative;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+.nav-item img {
+  width: 80px;
+  height: 80px;
+  transition: 0.3s;
+}
+
+.nav-item:hover img {
+  transform: scale(1.1);
+}
+
+.divider {
+  width: 2px;
+  height: 80px;
+  background: var(--text-color);
+  opacity: 0.5;
+}
+
+/* DROPDOWN MENU */
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--card-bg);
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  min-width: 140px;
+  z-index: 10;
+}
+
+.dropdown a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.dropdown a:hover {
+  background: #f2f2f2;
+  color: #a10094;
+}
+
+.nav-item:hover .dropdown {
+  display: block;
+}
+
+/* SEARCH BAR */
+.search-wrapper {
+  margin-top: 40px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.search-wrapper input {
+  width: 300px;
+  padding: 12px;
+  border: 2px solid #c400a3;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.search-wrapper button {
+  padding: 12px 20px;
+  background-color: #c400a3;
+  border: none;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.search-wrapper button:hover {
+  background: #550000;
+  transform: scale(1.05);
+}
+
+/* RESPONSIVE BREAKPOINTS */
+@media (max-width: 1024px) {
+  .nav-container {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .divider {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-container {
+    margin-top: 180px;
+  }
+
+  .nav-item img {
+    width: 65px;
+    height: 65px;
+  }
+
+  .dropdown {
+    position: static;
+    transform: none;
+    border: none;
+    box-shadow: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .craigslist img {
+    width: 110px;
+  }
+
+  .nav-container {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 600px) {
+  .search-wrapper {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .search-wrapper input,
+  .search-wrapper button {
+    width: 100%;
+  }
+}

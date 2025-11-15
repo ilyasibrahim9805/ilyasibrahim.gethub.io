@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navigation Icons</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Craigslist Logo -->
+  <div class="craigslist">
+    <img src="img/Craigslist-Logo.png" alt="Craigslist Logo">
+  </div>
+
+  <!-- Navigation Icons -->
+  <div class="nav-container">
+
+    <div class="nav-item">
+      <img src="img/house.png.png">
+      <p>Housing</p>
+      <div class="dropdown">
+        <a target="blank" href="https://www.apartments.com/">Apartments</a>
+        <a href="#">Rooms</a>
+        <a href="#">Sublets</a>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="nav-item">
+      <img src="img/Image Pasted 2025-08-11 at 06.41.58.png">
+      <p>Community</p>
+      <div class="dropdown">
+        <a href="#">Events</a>
+        <a href="#">Volunteering</a>
+        <a href="#">Meetups</a>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="nav-item">
+      <img src="img/Image Pasted 2025-08-11 at 06.44.43.png">
+      <p>Services</p>
+      <div class="dropdown">
+        <a href="#">Cleaning</a>
+        <a href="#">Tutoring</a>
+        <a href="#">Repairs</a>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="nav-item">
+      <img src="img/Image Pasted 2025-08-11 at 06.48.00.png">
+      <p>For Sale</p>
+      <div class="dropdown">
+        <a href="#">Electronics</a>
+        <a href="#">Furniture</a>
+        <a href="#">Clothing</a>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="nav-item">
+      <img src="img/Image Pasted 2025-08-11 at 06.49.55.png">
+      <p>Discussion<br>Forms</p>
+      <div class="dropdown">
+        <a href="#">General</a>
+        <a href="#">Q&A</a>
+        <a href="#">Local News</a>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="nav-item">
+      <img src="img/Image Pasted 2025-08-11 at 06.51.19.png">
+      <p>Jobs</p>
+      <div class="dropdown">
+        <a href="#">Full-time</a>
+        <a href="#">Part-time</a>
+        <a href="#">Internships</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Search Bar -->
+  <div class="search-wrapper">
+    <input type="text" placeholder="Search categories, items, or posts...">
+    <button>Search</button>
+  </div>
+
+  <!-- Theme Toggle -->
+  <button id="themeToggle" class="theme-btn">🌙 Dark Mode</button>
+
+  <!-- WORKING JavaScript -->
+  <script>
+    document.getElementById("themeToggle").addEventListener("click", function () {
+        document.body.classList.toggle("dark-mode");
+
+        if (document.body.classList.contains("dark-mode")) {
+            this.textContent = "☀️ Bright Mode";
+        } else {
+            this.textContent = "🌙 Dark Mode";
+        }
+    });
+  </script>
+
+</body>
+</html>
