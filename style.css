@@ -206,3 +206,65 @@ body {
   }
 }
 
+.footer {
+  margin-top: 150px;
+  color: rgb(70, 70, 70);
+  display: flex;
+  padding-left: 30px;
+  border-top: 1px solid rgb(140, 140, 140);
+}
+
+.footer div a {
+  text-align: left;
+}
+
+.footer div h3 {
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.contact-button {
+  background-color: rgb(85, 85, 85);
+  border: none;
+  color: white;
+  text-align: center;
+  height: 30px;
+  width: 120px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.col-1 {
+  flex-grow: .2;
+}
+
+.col-2 {
+  flex-grow: .2;
+}
+
+.col-3 {
+  flex-grow: .2;
+}
+.col-4 {
+  flex-grow: .2;
+}
+
+.col-2 a {
+  display: block;
+  text-decoration: none;
+  color: rgb(120, 120, 120);
+  padding-bottom: 20px; 
+}
+
+.col-3 a {
+  display: block;
+  text-decoration: none;
+  color: rgb(120, 120, 120);
+  padding-bottom: 20px; 
+}
+.col-4 a {
+  display: block;
+  text-decoration: none;
+  color: rgb(120, 120, 120);
+  padding-bottom: 20px; 
+}
