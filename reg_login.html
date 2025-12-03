@@ -31,6 +31,7 @@
             max-width: 95%;
             overflow: hidden;
             min-height: 500px;
+            padding-left: 10px;
         }
 
         /* --- 3. Form Sections --- */
@@ -116,6 +117,11 @@
             color: #7b29b3;
         }
 
+        .btn-cancel {
+            background-color: #7b29b3;
+            color: white;
+        }
+
         /* --- 6. Mobile Responsiveness --- */
         @media (max-width: 768px) {
             .container {
@@ -132,7 +138,12 @@
 <body>
 
     <div class="container">
-        
+        <div class="cancel">
+            <a href="./index.html">
+                <button class="btn-cancel">Cancel</button>
+            </a>
+        </div>
+
         <div class="form-section login-section">
             <h2>Welcome Back</h2>
             <p>Enter your credentials to access your account.</p>
@@ -172,6 +183,8 @@
         </div>
 
     </div>
+        
+
     <script>
         //JS to validate login form before sending user back to home page
         document.getElementById('loginForm').addEventListener('submit', function(event) {
@@ -199,7 +212,8 @@
                 alert('Login Successful.')
                 window.location.href = "./index.html"; //Send back to home
             }
-        });
+        }
+    );
 
         document.getElementById('regForm').addEventListener('submit', function(event) {
             event.preventDefault(); //Prevention of submitting default form
@@ -231,15 +245,6 @@
                 alert('Registration Successful.')
                 window.location.href = "./index.html"; //Send back to home
             }
-
-
-
-
-
-
-
-
-
         }
     );
 
